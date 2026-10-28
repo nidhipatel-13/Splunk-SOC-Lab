@@ -1,0 +1,4 @@
+
+index=main sourcetype="WinEventLog:Security" EventCode=1102
+| table _time host user Details
+| sort - _time
