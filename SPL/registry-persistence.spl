@@ -1,0 +1,5 @@
+
+index=* sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=13
+| search TargetObject="*\\CurrentVersion\\Run*"
+| table _time host Image TargetObject Details
+| sort - _time
