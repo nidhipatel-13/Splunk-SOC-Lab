@@ -1,0 +1,4 @@
+
+index=* sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=22
+| table _time host Image QueryName QueryStatus
+| sort - _time
