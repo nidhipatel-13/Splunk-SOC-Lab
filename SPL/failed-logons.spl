@@ -1,0 +1,6 @@
+
+index=* EventCode=4625
+| rex field=_raw "Logon Type:\s+(?<Logon_type>\d+)"
+| table _time host Account_Name EventCode Logon_type
+| sort - _time
+
