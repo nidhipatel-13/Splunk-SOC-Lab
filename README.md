@@ -73,60 +73,16 @@ SPL Searches and Security Investigation
 - Identify Security audit log clearing events.
 - Review surrounding activity and investigate potential evidence tampering.
 
-  
-## 🗺️ MITRE ATT&CK Coverage
-
-| Detection use case | Event ID | ATT&CK technique | Investigation goal |
-|---|---:|---|---|
-| DNS activity | Sysmon 22 | [T1071.004](https://attack.mitre.org/techniques/T1071/004/) | Investigate possible DNS-based C2 |
-| Failed logons | Security 4625 | [T1110](https://attack.mitre.org/techniques/T1110/) | Investigate possible brute force |
-| PowerShell | Sysmon 1 | [T1059.001](https://attack.mitre.org/techniques/T1059/001/) | Investigate command execution |
-| Registry Run keys | Sysmon 13 | [T1547.001](https://attack.mitre.org/techniques/T1547/001/) | Investigate possible persistence |
-| Security log clearing | Security 1102 | [T1070.001](https://attack.mitre.org/techniques/T1070/001/) | Investigate possible defense evasion |
-
-> 📌 These are analytic mappings, not proof that an ATT&CK technique occurred. The mapped techniques describe behavior that the detection may help investigate.
 
 ## 🧰 Skills Demonstrated
 
-- 🔎 Splunk Search Processing Language (SPL)
-- 📥 Windows event collection and analysis
-- 🔬 Sysmon telemetry investigation
-- 🧠 Threat hunting and event correlation
-- 🗺️ MITRE ATT&CK technique mapping
-- 🔐 Authentication monitoring
-- ⚡ Process execution analysis
-- 🧩 Registry persistence investigation
-- 🚨 Security log tampering investigation
+- SIEM fundamentals and event log investigation
+- Writing and understanding Splunk Processing Language (SPL) searches
+- Windows process monitoring using Sysmon
+- Failed logon investigation using Windows Security logs
+- DNS query monitoring and analysis
+- Registry activity monitoring
+- Windows Security log investigation
+- Filtering events and presenting results in tables
+- Understanding endpoint telemetry and its role in SOC operations
 
-## 📁 Repository Structure
-
-```text
-splunk-soc-lab/
-├── README.md
-├── .gitignore
-├── spl/
-│   ├── dns-queries.spl
-│   ├── failed-logons.spl
-│   ├── powershell-monitoring.spl
-│   ├── registry-persistence.spl
-│   └── security-log-cleared.spl
-└── docs/
-    └── investigation-notes.md
-```
-
-## 🚀 Project Roadmap
-
-- [x] Install Splunk Enterprise
-- [x] Configure Windows 10 VM
-- [x] Install Splunk Universal Forwarder
-- [x] Search Windows and Sysmon events
-- [x] Execute initial SPL investigations
-- [x] Document initial ATT&CK mappings
-- [ ] Build a SOC monitoring dashboard
-- [ ] Create and validate alert rules
-- [ ] Document investigation case studies
-- [ ] Add sanitized screenshots and findings
-
-## ⚠️ Disclaimer
-
-This project is for educational and defensive cybersecurity purposes in a controlled home lab. Detection results require validation and context. No event ID or SPL result should be treated as a definitive indicator of compromise without supporting evidence.
